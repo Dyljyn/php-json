@@ -1,0 +1,22 @@
+{
+    "name": "dyljyn/json",
+    "description": "Library to help declare JSON",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dyljyn",
+            "email": "vanbommeldylan@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/index.php"
+        ]
+    },
+    "require": {
+        "php": ">=8.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.5"
+    }
+}
