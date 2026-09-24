@@ -17,3 +17,4 @@ require_once __DIR__ . '/at.php';
 require_once __DIR__ . '/index.php';
 
 require_once __DIR__ . '/oneOf.php';
+require_once __DIR__ . '/map.php';

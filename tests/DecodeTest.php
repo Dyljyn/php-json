@@ -133,6 +133,22 @@ final class DecodeTest extends TestCase
         self::assertSame(1, $decoder->decode(1));
     }
 
+    public function testDecodesMap(): void {
+        $decoder = JD\map(
+            fn($first, $second) => [
+                'first' => $first,
+                'second' => $second,
+            ],
+            JD\index(0, JD\string()),
+            JD\index(1, JD\int())
+        );
+
+        $result = $decoder->decode(['test', 1]);
+
+        self::assertSame('test', $result['first']);
+        self::assertSame(1, $result['second']);
+    }
+
     public function testThrowsWhenStringIsInvalid(): void
     {
         $this->expectException(JD\DecodeException::class);
