@@ -18,5 +18,6 @@ require_once __DIR__ . '/index.php';
 
 require_once __DIR__ . '/oneOf.php';
 require_once __DIR__ . '/map.php';
-require_once __DIR__ . '/fail.php';
+require_once __DIR__ . '/andThen.php';
 require_once __DIR__ . '/succeed.php';
+require_once __DIR__ . '/fail.php';
