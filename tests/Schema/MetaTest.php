@@ -15,7 +15,6 @@ final class MetaTest extends TestCase
                 'title' => 'User',
                 'description' => 'A user.',
                 'type' => 'object',
-                'additionalProperties' => false,
             ],
             JS\meta(
                 title: 'User',

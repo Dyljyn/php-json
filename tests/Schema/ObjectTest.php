@@ -12,7 +12,6 @@ final class ObjectTest extends TestCase
         self::assertSame(
             [
                 'type' => 'object',
-                'additionalProperties' => false,
             ],
             JS\object(),
         );
@@ -56,7 +55,7 @@ final class ObjectTest extends TestCase
                 'patternProperties' => [
                     '^pattern$' => false,
                 ],
-                'additionalProperties' => true,
+                'additionalProperties' => false,
             ],
             JS\object(
                 properties: [
@@ -64,7 +63,7 @@ final class ObjectTest extends TestCase
                     JS\optional('optional', true),
                     JS\patternProperty('^pattern$', false),
                 ],
-                additionalProperties: true,
+                additionalProperties: false,
             ),
         );
     }
@@ -78,7 +77,6 @@ final class ObjectTest extends TestCase
                 'properties' => [
                     'a' => ['type' => 'string'],
                 ],
-                'additionalProperties' => false,
             ],
             JS\object([
                 JS\required('a', JS\string()),

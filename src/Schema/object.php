@@ -17,7 +17,7 @@ final readonly class ObjectProperty {
  */
 function object(
     array $properties = [],
-    array|bool $additionalProperties = false,
+    array|bool $additionalProperties = true,
 ): array {
     $required = [];
     $definedProperties = [];
@@ -53,7 +53,7 @@ function object(
         'required' => $nullIfEmpty(array_values(array_unique($required))),
         'properties' => $nullIfEmpty($definedProperties),
         'patternProperties' => $nullIfEmpty($patternProperties),
-        'additionalProperties' => $additionalProperties,
+        'additionalProperties' => $additionalProperties === true ? null : $additionalProperties,
     ]);
 }
 
