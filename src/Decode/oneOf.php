@@ -27,7 +27,7 @@ function oneOf(Decoder ...$decoders): Decoder
 
             throw new DecodeException(
                 $path,
-                "one of the following: \n\n\t" . implode("\n\n\t", $errors),
+                "Expected one of the following: \n\n\t" . implode("\n\n\t", $errors),
             );
         },
     );

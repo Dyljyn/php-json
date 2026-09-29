@@ -6,14 +6,14 @@ final class DecodeException extends \RuntimeException
 {
     public function __construct(
         public readonly array $path,
-        string $message,
+        string $message
     ) {
         $pathString = implode('.', $path);
 
         if ($pathString === '') {
-            parent::__construct("Expected {$message}");
+            parent::__construct($message);
         } else {
-            parent::__construct("{$pathString}: Expected {$message}");
+            parent::__construct("{$pathString}: {$message}");
         }
     }
 }

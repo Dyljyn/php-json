@@ -12,7 +12,7 @@ function string(): Decoder {
             if (!is_string($value)) {
                 throw new DecodeException(
                     $path,
-                    'a STRING',
+                    'Expected a STRING',
                 );
             }
 

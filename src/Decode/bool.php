@@ -12,7 +12,7 @@ function bool(): Decoder {
             if (!is_bool($value)) {
                 throw new DecodeException(
                     $path,
-                    'a BOOL',
+                    'Expected a BOOL',
                 );
             }
 

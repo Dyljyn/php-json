@@ -12,7 +12,7 @@ function int(): Decoder {
             if (!is_int($value)) {
                 throw new DecodeException(
                     $path,
-                    'an INT',
+                    'Expected an INT',
                 );
             }
 

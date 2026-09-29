@@ -22,7 +22,7 @@ function keyValue(Decoder $decoder): Decoder
             if (!is_object($value)) {
                 throw new DecodeException(
                     $path,
-                    'an OBJECT',
+                    'Expected an OBJECT',
                 );
             }
 

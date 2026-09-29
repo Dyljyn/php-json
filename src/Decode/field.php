@@ -16,14 +16,14 @@ function field(string $name, Decoder $decoder): Decoder {
             if (!is_object($value)) {
                 throw new DecodeException(
                     $path,
-                    'an OBJECT',
+                    'Expected an OBJECT',
                 );
             }
 
             if (!property_exists($value, $name)) {
                 throw new DecodeException(
                     [...$path, $name],
-                    "an OBJECT with a field named `{$name}`",
+                    "Expected an OBJECT with a field named `{$name}`",
                 );
             }
 

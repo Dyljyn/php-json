@@ -19,7 +19,7 @@ function index(int $index, Decoder $decoder): Decoder {
             ) {
                 throw new DecodeException(
                     $path,
-                    'an ARRAY',
+                    'Expected an ARRAY',
                 );
             }
 
@@ -29,9 +29,9 @@ function index(int $index, Decoder $decoder): Decoder {
                 throw new DecodeException(
                     $path,
                     match ($count) {
-                        0 => "a LONGER array. Need index {$index} but only see no entries",
-                        1 => "a LONGER array. Need index {$index} but only see 1 entry",
-                        default => "a LONGER array. Need index {$index} but only see {$count} entries",
+                        0 => "Expected a LONGER array. Need index {$index} but only see no entries",
+                        1 => "Expected a LONGER array. Need index {$index} but only see 1 entry",
+                        default => "Expected a LONGER array. Need index {$index} but only see {$count} entries",
                     }
                 );
             }

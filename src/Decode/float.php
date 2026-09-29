@@ -16,7 +16,7 @@ function float(): Decoder {
             if (!is_float($value)) {
                 throw new DecodeException(
                     $path,
-                    'a FLOAT',
+                    'Expected a FLOAT',
                 );
             }
 

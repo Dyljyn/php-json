@@ -21,7 +21,7 @@ function array_(Decoder $decoder): Decoder
             ) {
                 throw new DecodeException(
                     $path,
-                    'an ARRAY',
+                    'Expected an ARRAY',
                 );
             }
 
